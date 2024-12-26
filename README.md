@@ -1,0 +1,1 @@
+his repository contains a collection of assignments and projects completed as part of the Master's in Computer Science program at Queen Mary University of London (QMUL). The assignments demonstrate a diverse range of skills and knowledge across core and advanced topics in computer science
