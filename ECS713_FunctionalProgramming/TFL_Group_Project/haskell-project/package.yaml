@@ -1,0 +1,46 @@
+name: haskell-project
+version: 0.1.0.0
+license: MIT
+license-file: LICENSE
+author: authername
+maintainer: example@example.com
+category: System
+extra-source-files:
+  - README.md
+  #- ChangeLog.md
+
+dependencies:
+  - base >= 4.7 && < 5
+  - aeson
+  - bytestring
+  - http-conduit
+  - sqlite-simple
+  - text
+  - directory
+  - time
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Fetch
+    - Types
+    - Database
+    - Parse
+executables:
+  haskell-project:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -Wall
+    dependencies:
+      - haskell-project
+
+tests:
+  haskell-project-test:
+    main: Main.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+    dependencies:
+      - haskell-project
+      - aeson
